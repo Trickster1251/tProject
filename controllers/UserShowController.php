@@ -23,7 +23,8 @@ class UserShowController extends Controller
 
     public function actionView2()
     {
-        return $this->render('view2');
+        $user = $this->findModel(1);
+        return $this->render('view2', ['user' => $user]);
     }
 
     protected function findModel($id)
