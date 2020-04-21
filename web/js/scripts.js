@@ -1,1 +1,0 @@
-$('.wrap').append('<p>About!!!</p>')

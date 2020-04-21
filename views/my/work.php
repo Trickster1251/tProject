@@ -1,12 +1,9 @@
-<?php
-//     echo getcwd(); die();
-?>
-
     <!DOCTYPE html>
     <html lang="en">
     <head>
     <meta charset="utf-8">
-    <title>Flat Design Mini Portfolio</title>
+    <title>WORK | Flat Design Mini Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Flat Design Mini Portfolio">
     <meta name="keywords" content="responsive, bootstrap, flat design, flat ui, portfolio">
     <meta name="author" content="Dzyngiri">
@@ -17,15 +14,37 @@
     <link href="../../web/css/style.css" rel="stylesheet">
     <link href="font/css/fontello.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+    <!-- scripts -->
+    <!-- Add jQuery library -->
+    <script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+    <!-- Add fancyBox main JS and CSS files -->
+    <script type="text/javascript" src="js/jquery.fancybox.js?v=2.1.5"></script>
+    <link rel="stylesheet" type="text/css" href="../../web/css/jquery.fancybox.css?v=2.1.5" media="screen" />
+    <script>
+            $(document).ready(function() {
+        $(".fancybox-thumb").fancybox({
+            helpers	: {
+                title	: {
+                    type: 'inside'
+                },
+                overlay : {
+                            css : {
+                                'background' : 'rgba(1,1,1,0.65)'
+                            }
+                        }
+            }
+        });
+    });
+        </script>
     </head>
     <body>
     <div class="navbar">
       <div class="navbar-inner">
-        <div class="container"> <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a> <a class="brand" href="index.php"><img src="/views/my/img/user.jpg"/></a>
+        <div class="container"> <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a> <a class="brand" href="index.php"><img src="img/user.jpg"/></a>
           <ul class="nav nav-collapse pull-right">
-            <li><a href="index.php" class="active"><i class="icon-user"></i> Profile</a></li>
+            <li><a href="index.php"><i class="icon-user"></i> Profile</a></li>
             <li><a href="skills.php"><i class="icon-trophy"></i> Skills</a></li>
-            <li><a href="work.php"><i class="icon-picture"></i> Work</a></li>
+            <li><a href="work.php" class="active"><i class="icon-picture"></i> Work</a></li>
             <li><a href="resume.php"><i class="icon-doc-text"></i> Resume</a></li>
           </ul>
           <!-- Everything you want hidden at 940px or less, place within here -->
@@ -35,21 +54,39 @@
         </div>
       </div>
     </div>
-    <!--Profile container-->
-    <div class="container profile">
-      <div class="span3"> <img src="img/mini.png"> </div>
-      <div class="span5">
-        <h1>Juan Dela Cruz</h1>
-        <h3>Web &amp; Graphics Designer</h3>
-        <p> Hello I am Juan Dela Cruz Web and Graphics Designer from Philipines. If yopu have something to be done just call my name and I will be there. :-) </p>
-        <a href="#" class="hire-me"><i class="icon-paper-plane"></i> Hire Me </a> </div>
+    <!-- Works container -->
+    <div class="container work">
+      <h2>My Work</h2>
+      <ul class="work-images">
+        <li>
+          <div><a class="fancybox-thumb" rel="fancybox-thumb" href="img/1.jpg" title="Image 01"><img src="img/1-thumb.jpg" /></a></div>
+        </li>
+        <li>
+          <div><a class="fancybox-thumb" rel="fancybox-thumb" href="img/2.jpg"><img src="img/2-thumb.jpg" /></a></div>
+        </li>
+        <li>
+          <div><a class="fancybox-thumb" rel="fancybox-thumb" href="img/3.jpg"><img src="img/3-thumb.jpg" /></a></div>
+        </li>
+      </ul>
+      <ul class="work-images">
+        <li>
+          <div><a class="fancybox-thumb" rel="fancybox-thumb" href="img/4.jpg"><img src="img/4-thumb.jpg" /></a></div>
+        </li>
+        <li>
+          <div><a class="fancybox-thumb" rel="fancybox-thumb" href="img/5.jpg"><img src="img/5-thumb.jpg" /></a></div>
+        </li>
+        <li>
+          <div><a class="fancybox-thumb" rel="fancybox-thumb" href="img/6.jpg"><img src="img/6-thumb.jpg" /></a></div>
+        </li>
+      </ul>
+      <!--Dummy images by The Fox And King :: http://dribbble.com/snootyfox-->
     </div>
-    <!--END: Profile container-->
+    <!--END: Work container-->
     <!-- Social Icons -->
     <div class="row social">
       <ul class="social-icons">
-        <li><a href="/views/my" target="_blank"><img src="/views/my/img/fb.png" alt="facebook"></a></li>
-        <li><a href="/views/my" target="_blank"><img src="img/tw.png" alt="twitter"></a></li>
+        <li><a href="#" target="_blank"><img src="img/fb.png" alt="facebook"></a></li>
+        <li><a href="#" target="_blank"><img src="img/tw.png" alt="twitter"></a></li>
         <li><a href="#" target="_blank"><img src="img/go.png" alt="google plus"></a></li>
         <li><a href="#" target="_blank"><img src="img/pin.png" alt="pinterest"></a></li>
         <li><a href="#" target="_blank"><img src="img/st.png" alt="stumbleupon"></a></li>
@@ -65,7 +102,6 @@
       </div>
     </div>
     <!-- Contact form in Modal -->
-    <!-- Modal -->
     <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
@@ -83,10 +119,9 @@
       </div>
     </div>
     <!-- Scripts -->
-    <script src="http://code.jquery.com/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script>
-                $('#myModal').modal('hidden')
-        </script>
+            $('#myModal').modal('hidden')
+    </script>
     </body>
     </html>

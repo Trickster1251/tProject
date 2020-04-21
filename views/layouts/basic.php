@@ -1,55 +1,82 @@
 <?php
+//     echo getcwd(); die();
+?>
 
-
-use app\widgets\Alert;
-use yii\helpers\Html;
-use yii\bootstrap\Nav;
-use yii\bootstrap\NavBar;
-use yii\widgets\Breadcrumbs;
-use app\assets\AppSet;
-
-AppSet::register($this);
-
-$this->beginPage() ?>
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
-    <?php $this->head() ?>
-
-
+    <meta charset="utf-8">
+    <title>Flat Design Mini Portfolio</title>
+    <meta name="description" content="Flat Design Mini Portfolio">
+    <meta name="keywords" content="responsive, bootstrap, flat design, flat ui, portfolio">
+    <meta name="author" content="Dzyngiri">
+    <meta name="description" content="This is a responsive flat design mini portfolio for creative folks who want to showcase their work online.">
+    <!-- styles -->
+    <link href="/css/bootstrap.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+    <link href="/font/css/fontello.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
 </head>
-
 <body>
-<?php $this->beginBody() ?>
-<div class="wrap">
-    <div class="container">
-        <nav class="nav nav-pills nav-justified">
-            <a class="nav-item nav-link active" <?=Html::a('Главная','/web/')?></a>
-            <a class="nav-item nav-link" <?=Html::a('О нас','http://localhost:8080/view.php?r=my%2Fabout')?></a>
-            <a class="nav-item nav-link" <?= Html::a('Контакты','http://localhost:8080/view.php?r=my%2Findex')?></a>
-            <a class="nav-item nav-link " href="#">Disabled</a>
-        </nav>
-
-        <?= $content ?>
-
-
+<div class="navbar">
+    <div class="navbar-inner">
+        <div class="container"> <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a> <a class="brand" href="index.php"><img src="/img/user.jpg"/></a>
+            <ul class="nav nav-collapse pull-right">
+                <li><a href="index.php" class="active"><i class="icon-user"></i> Profile</a></li>
+                <li><a href="skills.php"><i class="icon-trophy"></i> Skills</a></li>
+                <li><a href="work.php"><i class="icon-picture"></i> Work</a></li>
+                <li><a href="resume.php"><i class="icon-doc-text"></i> Resume</a></li>
+            </ul>
+            <!-- Everything you want hidden at 940px or less, place within here -->
+            <div class="nav-collapse collapse">
+                <!-- .nav, .navbar-search, .navbar-form, etc -->
+            </div>
+        </div>
     </div>
 </div>
 
+<?= $content ?>
 
+<!-- Social Icons -->
+<div class="row social">
+    <ul class="social-icons">
+        <li><a href="/views/my" target="_blank"><img src="/img/fb.png" alt="facebook"></a></li>
+        <li><a href="/views/my" target="_blank"><img src="/img/tw.png" alt="twitter"></a></li>
+        <li><a href="#" target="_blank"><img src="/img/go.png" alt="google plus"></a></li>
+        <li><a href="#" target="_blank"><img src="/img/pin.png" alt="pinterest"></a></li>
+        <li><a href="#" target="_blank"><img src="/img/st.png" alt="stumbleupon"></a></li>
+        <li><a href="#" target="_blank"><img src="/img/dr.png" alt="dribbble"></a></li>
+    </ul>
+</div>
+<!-- END: Social Icons -->
+<!-- Footer -->
+<div class="footer">
+    <div class="container">
+        <p class="pull-left"><a href="http://dzyngiri.com">www.dzyngiri.com</a></p>
+        <p class="pull-right"><a href="#myModal" role="button" data-toggle="modal"> <i class="icon-mail"></i> CONTACT</a></p>
+    </div>
+</div>
+<!-- Contact form in Modal -->
+<!-- Modal -->
+<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="myModalLabel"><i class="icon-mail"></i> Contact Me</h3>
+    </div>
+    <div class="modal-body">
+        <form>
+            <input type="text" placeholder="Yopur Name">
+            <input type="text" placeholder="Your Email">
+            <input type="text" placeholder="Website (Optional)">
+            <textarea rows="3" style="width:80%"></textarea>
+            <br/>
+            <button type="submit" class="btn btn-large"><i class="icon-paper-plane"></i> SUBMIT</button>
+        </form>
+    </div>
+</div>
+<!-- Scripts -->
+<script src="http://code.jquery.com/jquery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
 
-
-
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-<?php $this->endBody() ?>
 </body>
 </html>
-<?php $this->endPage() ?>

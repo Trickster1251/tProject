@@ -1,12 +1,9 @@
-<?php
-//     echo getcwd(); die();
-?>
-
     <!DOCTYPE html>
     <html lang="en">
     <head>
     <meta charset="utf-8">
-    <title>Flat Design Mini Portfolio</title>
+    <title>RESUME | Flat Design Mini Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Flat Design Mini Portfolio">
     <meta name="keywords" content="responsive, bootstrap, flat design, flat ui, portfolio">
     <meta name="author" content="Dzyngiri">
@@ -17,16 +14,17 @@
     <link href="../../web/css/style.css" rel="stylesheet">
     <link href="font/css/fontello.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+    <!-- scripts -->
     </head>
     <body>
     <div class="navbar">
       <div class="navbar-inner">
-        <div class="container"> <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a> <a class="brand" href="index.php"><img src="/views/my/img/user.jpg"/></a>
+        <div class="container"> <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a> <a class="brand" href="index.php"><img src="img/user.jpg"/></a>
           <ul class="nav nav-collapse pull-right">
-            <li><a href="index.php" class="active"><i class="icon-user"></i> Profile</a></li>
+            <li><a href="index.php"><i class="icon-user"></i> Profile</a></li>
             <li><a href="skills.php"><i class="icon-trophy"></i> Skills</a></li>
             <li><a href="work.php"><i class="icon-picture"></i> Work</a></li>
-            <li><a href="resume.php"><i class="icon-doc-text"></i> Resume</a></li>
+            <li><a href="resume.php" class="active"><i class="icon-doc-text"></i> Resume</a></li>
           </ul>
           <!-- Everything you want hidden at 940px or less, place within here -->
           <div class="nav-collapse collapse">
@@ -35,21 +33,20 @@
         </div>
       </div>
     </div>
-    <!--Profile container-->
-    <div class="container profile">
-      <div class="span3"> <img src="img/mini.png"> </div>
-      <div class="span5">
-        <h1>Juan Dela Cruz</h1>
-        <h3>Web &amp; Graphics Designer</h3>
-        <p> Hello I am Juan Dela Cruz Web and Graphics Designer from Philipines. If yopu have something to be done just call my name and I will be there. :-) </p>
-        <a href="#" class="hire-me"><i class="icon-paper-plane"></i> Hire Me </a> </div>
+    <!-- Resume container -->
+    <div class="container resume">
+      <h2>My Resume</h2>
+      <h3>You can download my resume for your reference and I hope that we will meet very soon! :)</h3>
+      <div class="btn-center"> <a href="#" class="hire-me"><i class="icon-download"></i> Download Resume</a>
+        <h2>125kb</h2>
+      </div>
     </div>
-    <!--END: Profile container-->
+    <!--END: Resume container-->
     <!-- Social Icons -->
     <div class="row social">
       <ul class="social-icons">
-        <li><a href="/views/my" target="_blank"><img src="/views/my/img/fb.png" alt="facebook"></a></li>
-        <li><a href="/views/my" target="_blank"><img src="img/tw.png" alt="twitter"></a></li>
+        <li><a href="#" target="_blank"><img src="img/fb.png" alt="facebook"></a></li>
+        <li><a href="#" target="_blank"><img src="img/tw.png" alt="twitter"></a></li>
         <li><a href="#" target="_blank"><img src="img/go.png" alt="google plus"></a></li>
         <li><a href="#" target="_blank"><img src="img/pin.png" alt="pinterest"></a></li>
         <li><a href="#" target="_blank"><img src="img/st.png" alt="stumbleupon"></a></li>
@@ -86,7 +83,7 @@
     <script src="http://code.jquery.com/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script>
-                $('#myModal').modal('hidden')
-        </script>
+            $('#myModal').modal('hidden')
+    </script>
     </body>
     </html>
