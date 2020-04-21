@@ -12,11 +12,19 @@ use Yii;
 class UserShowController extends Controller
 {
 
+    public $layout = 'basic';
+
     public function actionView($id)
     {
         return $this->render('view', [
             'model' => $this->findModel($id),
         ]);
+    }
+
+    public function actionView2()
+    {
+        $user = $this->findModel(1);
+        return $this->render('view2', ['user' => $user]);
     }
 
     protected function findModel($id)

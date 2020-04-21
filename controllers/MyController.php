@@ -12,14 +12,21 @@ class MyController extends AppController
     public function actionIndex($id = null)
     {
 
-        $hi = 123;
-        $name = ['Ivanov', 'Petrov', 'Sidorov'];
-
-        return $this->render('index', compact('hi', 'name', 'id'));
+        return $this->render('index');
     }
 
-    public function actionAbout($id = null)
+    public function actionResume($id = null)
     {
-        return $this->render('about');
+        return $this->render('resume');
+    }
+
+    public function actionSkills($id = null)
+    {
+        return $this->render('skills');
+    }
+
+    public function actionWork($id = null)
+    {
+        return $this->render('work');
     }
 }
