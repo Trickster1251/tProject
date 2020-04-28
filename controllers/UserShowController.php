@@ -1,6 +1,7 @@
 <?php
 
 namespace app\controllers;
+
 use app\models\Users;
 use app\models\UsersSearch;
 use yii\web\Controller;
@@ -21,7 +22,21 @@ class UserShowController extends Controller
 
     public function actionIndex()
     {
-        $user = $this->findModel(1);
+        $currentUser = 1;
+
+        $sql = <<<SQL
+SELECT user_like_id FROM users_like WHERE users_id = $currentUser;
+SQL;
+        $ids = Yii::$app->db->createCommand($sql)->queryColumn();
+        $ids[] = $currentUser; //Добавляет переменную currentUser в массив ids, чтобы пользователь не видел самого себя
+        $idsCurrentUserLike = join(',', $ids);
+
+
+        $sql = <<<SQL
+SELECT id FROM users WHERE id NOT IN ($idsCurrentUserLike);
+SQL;
+        $id = Yii::$app->db->createCommand($sql)->queryScalar();
+        $user = $this->findModel($id);
         return $this->render('index', ['user' => $user]);
 
     }
