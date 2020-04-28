@@ -19,9 +19,11 @@ class UserShowController extends Controller
         return $this->render('work');
     }
 
-    public function actionSkills()
+    public function actionIndex()
     {
-        return $this->render('skills');
+        $user = $this->findModel(1);
+        return $this->render('index', ['user' => $user]);
+
     }
 
     public function actionResume()
@@ -36,10 +38,10 @@ class UserShowController extends Controller
         ]);
     }
 
-    public function actionView2()
+    public function actionProfile()
     {
         $user = $this->findModel(1);
-        return $this->render('view2', ['user' => $user]);
+        return $this->render('profile', ['user' => $user]);
     }
 
     protected function findModel($id)
