@@ -33,7 +33,7 @@ SQL;
 
 
         $sql = <<<SQL
-SELECT id FROM users WHERE id NOT IN ($idsCurrentUserLike);
+SELECT id FROM users WHERE id NOT IN ($idsCurrentUserLike) LIMIT 1
 SQL;
         $id = Yii::$app->db->createCommand($sql)->queryScalar();
         $user = $this->findModel($id);
