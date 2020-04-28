@@ -20,12 +20,12 @@
 <body>
 <div class="navbar">
     <div class="navbar-inner">
-        <div class="container"> <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a> <a class="brand" href="index.php"><img src="/img/user.jpg"/></a>
+        <div class="container"> <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a> <a class="brand" href="view2"><img src="/img/user.jpg"/></a>
             <ul class="nav nav-collapse pull-right">
-                <li><a href="index.php" class="active"><i class="icon-user"></i> Profile</a></li>
-                <li><a href="skills.php"><i class="icon-trophy"></i> Skills</a></li>
-                <li><a href="work.php"><i class="icon-picture"></i> Work</a></li>
-                <li><a href="resume.php"><i class="icon-doc-text"></i> Resume</a></li>
+                <li><a href="/user-show/view2" class="active"><i class="icon-user"></i> Profile</a></li>
+                <li><a href="/../user-show/skills"><i class="icon-trophy"></i> Skills</a></li>
+                <li><a href="/../user-show/work"><i class="icon-picture"></i> Work</a></li>
+                <li><a href="/../user-show/resume"><i class="icon-doc-text"></i> Resume</a></li>
             </ul>
             <!-- Everything you want hidden at 940px or less, place within here -->
             <div class="nav-collapse collapse">

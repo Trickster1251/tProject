@@ -10,6 +10,10 @@ use Yii;
  * @property int $id
  * @property string|null $name
  * @property int|null $age
+ * @property string|null $discription
+ * @property string|null $sex
+ * @property string|null $sexpar
+ * @property string|null $agepar
  */
 class Users extends \yii\db\ActiveRecord
 {
@@ -27,7 +31,7 @@ class Users extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['name'], 'string'],
+            [['name', 'discription', 'sex', 'sexpar', 'agepar'], 'string'],
             [['age'], 'integer'],
         ];
     }
@@ -39,8 +43,12 @@ class Users extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'name' => 'Имя',
-            'age' => 'Возраст',
+            'name' => 'Name',
+            'age' => 'Age',
+            'discription' => 'Discription',
+            'sex' => 'Sex',
+            'sexpar' => 'Sexpar',
+            'agepar' => 'Agepar',
         ];
     }
 }

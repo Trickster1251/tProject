@@ -3,23 +3,13 @@
     <head>
     <meta charset="utf-8">
     <title>WORK | Flat Design Mini Portfolio</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Flat Design Mini Portfolio">
-    <meta name="keywords" content="responsive, bootstrap, flat design, flat ui, portfolio">
-    <meta name="author" content="Dzyngiri">
-    <meta name="description" content="This is a responsive flat design mini portfolio for creative folks who want to showcase their work online.">
-    <!-- styles -->
-    <link href="../../web/css/bootstrap.css" rel="stylesheet">
-    <link href="css/bootstrap-responsive.css" rel="stylesheet">
-    <link href="../../web/css/style.css" rel="stylesheet">
-    <link href="font/css/fontello.css" rel="stylesheet">
-    <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+
     <!-- scripts -->
     <!-- Add jQuery library -->
     <script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
     <!-- Add fancyBox main JS and CSS files -->
     <script type="text/javascript" src="js/jquery.fancybox.js?v=2.1.5"></script>
-    <link rel="stylesheet" type="text/css" href="../../web/css/jquery.fancybox.css?v=2.1.5" media="screen" />
+    <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css?v=2.1.5" media="screen" />
     <script>
             $(document).ready(function() {
         $(".fancybox-thumb").fancybox({
@@ -38,22 +28,6 @@
         </script>
     </head>
     <body>
-    <div class="navbar">
-      <div class="navbar-inner">
-        <div class="container"> <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a> <a class="brand" href="index.php"><img src="img/user.jpg"/></a>
-          <ul class="nav nav-collapse pull-right">
-            <li><a href="index.php"><i class="icon-user"></i> Profile</a></li>
-            <li><a href="skills.php"><i class="icon-trophy"></i> Skills</a></li>
-            <li><a href="work.php" class="active"><i class="icon-picture"></i> Work</a></li>
-            <li><a href="resume.php"><i class="icon-doc-text"></i> Resume</a></li>
-          </ul>
-          <!-- Everything you want hidden at 940px or less, place within here -->
-          <div class="nav-collapse collapse">
-            <!-- .nav, .navbar-search, .navbar-form, etc -->
-          </div>
-        </div>
-      </div>
-    </div>
     <!-- Works container -->
     <div class="container work">
       <h2>My Work</h2>
@@ -81,19 +55,7 @@
       </ul>
       <!--Dummy images by The Fox And King :: http://dribbble.com/snootyfox-->
     </div>
-    <!--END: Work container-->
-    <!-- Social Icons -->
-    <div class="row social">
-      <ul class="social-icons">
-        <li><a href="#" target="_blank"><img src="img/fb.png" alt="facebook"></a></li>
-        <li><a href="#" target="_blank"><img src="img/tw.png" alt="twitter"></a></li>
-        <li><a href="#" target="_blank"><img src="img/go.png" alt="google plus"></a></li>
-        <li><a href="#" target="_blank"><img src="img/pin.png" alt="pinterest"></a></li>
-        <li><a href="#" target="_blank"><img src="img/st.png" alt="stumbleupon"></a></li>
-        <li><a href="#" target="_blank"><img src="img/dr.png" alt="dribbble"></a></li>
-      </ul>
-    </div>
-    <!-- END: Social Icons -->
+
     <!-- Footer -->
     <div class="footer">
       <div class="container">

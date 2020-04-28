@@ -14,6 +14,21 @@ class UserShowController extends Controller
 
     public $layout = 'basic';
 
+    public function actionWork()
+    {
+        return $this->render('work');
+    }
+
+    public function actionSkills()
+    {
+        return $this->render('skills');
+    }
+
+    public function actionResume()
+    {
+        return $this->render('resume');
+    }
+
     public function actionView($id)
     {
         return $this->render('view', [

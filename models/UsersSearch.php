@@ -18,7 +18,7 @@ class UsersSearch extends Users
     {
         return [
             [['id', 'age'], 'integer'],
-            [['name'], 'safe'],
+            [['name', 'discription', 'sex', 'sexpar', 'agepar'], 'safe'],
         ];
     }
 
@@ -62,7 +62,11 @@ class UsersSearch extends Users
             'age' => $this->age,
         ]);
 
-        $query->andFilterWhere(['like', 'name', $this->name]);
+        $query->andFilterWhere(['like', 'name', $this->name])
+            ->andFilterWhere(['like', 'discription', $this->discription])
+            ->andFilterWhere(['like', 'sex', $this->sex])
+            ->andFilterWhere(['like', 'sexpar', $this->sexpar])
+            ->andFilterWhere(['like', 'agepar', $this->agepar]);
 
         return $dataProvider;
     }
