@@ -77,9 +77,11 @@ SQL;//Выводит список всех нелайкнутых пользов
 
     protected function findModel($id)
     {
-        if (($model = Users::findOne($id)) !== null) {
+        $model = Users::findOne($id);
+        if ($model !== null) {
             return $model;
         }
+
         return null;
     }
 
