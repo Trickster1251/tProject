@@ -17,13 +17,17 @@ class UserLikeController extends Controller
     {
         $currentUser = 1;
         $userLikeId = (int)$_POST["user_like_id"];
-        // Вносит видимого пользователя в таблицу user_like
-        $sql = <<<SQL
-INSERT INTO users_like(users_id, user_like_id) VALUES ($currentUser, $userLikeId)
-SQL;
 
-        // tut queryScalar ne nushen skoree vsego i lishniy
-        // kommeni privikay sverhu pisat pls, eto pravilno ok
-        Yii::$app->db->createCommand($sql)->queryOne();
+//        $sql = <<<SQL
+//INSERT INTO users_like(users_id, user_like_id, reason) VALUES ($currentUser, $userLikeId,'')
+//SQL;
+
+        Yii::$app->db->createCommand()->insert('users_like', [
+            'users_id'=> $currentUser,
+            'user_like_id' => $userLikeId,
+            'reason' => '',
+        ])->execute();
+        return $this->redirect(['user-show/index']);
+
     }
 }
