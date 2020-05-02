@@ -11,7 +11,6 @@ class UserRegisterController extends Controller
 
     public $layout = 'basic';
 
-
     public function actionIndex()
     {
         return $this->render('index');

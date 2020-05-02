@@ -1,4 +1,3 @@
-
 <div class="container profile">
     <div class="span3"> <img src="/img/mini.png"> </div>
     <div class="span5">
