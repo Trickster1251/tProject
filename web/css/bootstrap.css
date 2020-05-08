@@ -1063,7 +1063,7 @@ input[type="file"], input[type="image"], input[type="submit"], input[type="reset
 }
 select, input[type="file"] {
 	height: 30px;
-  /* In IE7, the height of the select element cannot be changed by height, only font-size */
+  /* In IE7, the height of the select element cannot be changed by height, only fonts-size */
 
   *margin-top: 4px;
 	/* For IE7, add top margin to align select with labels */
@@ -2042,7 +2042,7 @@ button.btn.btn-mini, input[type="submit"].btn.btn-mini {
 .icon-camera {
   background-position: -120px -48px;
 }
-.icon-font {
+.icon-fonts {
   background-position: -144px -48px;
 }
 .icon-bold {
