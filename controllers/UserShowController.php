@@ -21,6 +21,10 @@ class UserShowController extends Controller
 
     public function actionIndex()
     {
+        if (Yii::$app->getUser()->getIsGuest()) {
+            return $this->redirect(['user-login/index']);
+        }
+
         $currentUser = Yii::$app->getUser()->getId();
 
         $sql = <<<SQL
@@ -56,7 +60,12 @@ SQL;//Выводит список всех нелайкнутых пользов
 
     public function actionProfile()
     {
-        $user = $this->findModel(1);
+        if (Yii::$app->getUser()->getIsGuest()) {
+            return $this->redirect(['user-login/index']);
+        }
+
+        $currentUser = Yii::$app->getUser()->getId();
+        $user = $this->findModel($currentUser);
         return $this->render('profile', ['user' => $user]);
     }
 
