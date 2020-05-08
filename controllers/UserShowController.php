@@ -21,7 +21,7 @@ class UserShowController extends Controller
 
     public function actionIndex()
     {
-        $currentUser = 1;
+        $currentUser = Yii::$app->getUser()->getId();
 
         $sql = <<<SQL
 SELECT user_like_id FROM users_like WHERE users_id = $currentUser

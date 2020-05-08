@@ -4,6 +4,7 @@
 namespace app\controllers;
 
 use app\models\Users;
+use Yii;
 use yii\web\Controller;
 
 class UserRegisterController extends Controller
@@ -13,6 +14,9 @@ class UserRegisterController extends Controller
 
     public function actionIndex()
     {
+        if (!Yii::$app->getUser()->getIsGuest()) {
+            return $this->redirect(['user-show/index']);
+        }
         return $this->render('index');
     }
 
@@ -20,16 +24,21 @@ class UserRegisterController extends Controller
     {
         $name = $_POST['name'];
         $age = $_POST['age'];
-//        $discription = $_POST['discription'];
+        $description = $_POST['description'];
         $sex = $_POST['sex'];
-
+        $login = $_POST['login'];
+        $password = $_POST['password'];
+        $passwordBcrypt = Yii::$app->getSecurity()->generatePasswordHash($password);
         $user = new Users();
         $user->name = $name;
         $user->age = $age;
-//        $user->discription = $discription;
+        $user->description = $description;
         $user->sex = $sex;
-        $user->save();
+        $user->login = $login;
+        $user->password = $passwordBcrypt;
 
-        var_dump('Создание пользователя : '.$user->id.'<br>'.'Имя : '.$user->name);
+        $user->save();
+        Yii::$app->user->login($user);
+        return $this->redirect(['user-show/index']);
     }
 }

@@ -3,7 +3,7 @@
     <div class="span5">
         <h1><?= $user->name ?></h1>
         <h4><?= $user->age . ' лет' ?> </h4>
-        <p><?= $user->discription ?> </p>
+        <p><?= $user->description ?> </p>
 
         <form action="/user-like/create" method="post">
             <input type="hidden" name="<?= Yii::$app->request->csrfParam ?>"

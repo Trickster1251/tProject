@@ -18,7 +18,7 @@ class UsersSearch extends Users
     {
         return [
             [['id', 'age'], 'integer'],
-            [['name', 'discription', 'sex', 'sexpar', 'agepar'], 'safe'],
+            [['name', 'description', 'sex', 'sexpar', 'agepar'], 'safe'],
         ];
     }
 
@@ -63,7 +63,7 @@ class UsersSearch extends Users
         ]);
 
         $query->andFilterWhere(['like', 'name', $this->name])
-            ->andFilterWhere(['like', 'discription', $this->discription])
+            ->andFilterWhere(['like', 'description', $this->description])
             ->andFilterWhere(['like', 'sex', $this->sex])
             ->andFilterWhere(['like', 'sexpar', $this->sexpar])
             ->andFilterWhere(['like', 'agepar', $this->agepar]);

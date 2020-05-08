@@ -15,7 +15,7 @@ class UserDislikeController extends Controller
 
     public function actionCreate()
     {
-        $currentUser = 1;
+        $currentUser = Yii::$app->getUser()->getId();
         $userDislikeId = (int)$_POST["user_dislike_id"];
 
 //        $sql = <<<SQL

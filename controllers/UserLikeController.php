@@ -15,7 +15,7 @@ class UserLikeController extends Controller
 
     public function actionCreate()
     {
-        $currentUser = 1;
+        $currentUser = Yii::$app->getUser()->getId();
         $userLikeId = (int)$_POST["user_like_id"];
 
 

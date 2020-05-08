@@ -19,8 +19,17 @@
             <ul class="nav nav-collapse ">
                 <li><a style="font-size:14px" href="/user-show/profile" class="active"><i class="fa fa-user-circle-o"></i> Профиль</a></li>
                 <li><a style="font-size:14px" href="/user-show/index"><i class="icon-trophy"></i> Главная</a></li>
+
+                <?php if (Yii::$app->getUser()->getIsGuest()) {?>
                 <li><a style="font-size:14px" href="/user-register/index"><i class="fa fa-sign-in"></i> Регистрация</a></li>
                 <li><a style="font-size:14px" href="/user-login/index"><i class="fa fa-sign-in"></i> Вход</a></li>
+                <?php } ?>
+
+                <?php if (!Yii::$app->getUser()->getIsGuest()) {?>
+                    <li><a style="font-size:14px" href="/user-login/logout"><i class="fa fa-sign-in"></i> Выйти </a></li>
+                <?php } ?>
+
+
             </ul>
             <div class="nav-collapse collapse">
             </div>
