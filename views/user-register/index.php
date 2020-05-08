@@ -10,15 +10,26 @@
 <body>
 <form action="/user-register/create" method="post">
     <input type="hidden" name="<?= Yii::$app->request->csrfParam ?>" value="<?= Yii::$app->request->getCsrfToken() ?>"/>
-    <label>Ваше Имя: </label><br>
-    <input type="text" name="name" placeholder="Имя"><br>
-    <label>Ваш Возраст: </label><br>
-    <input type="number" name="age" placeholder="Возраст"><br>
-    <label>Ваш пол: </label><br>
-    <input type="text" name="sex" placeholder="Пол"><br>
-    <label>Напишите о себе: </label><br>
-    <input type="text" name="discription" placeholder="Описание"><br>
+    <div class="form-group">
+        <label for="exampleInputEmail1" >Ваше Имя: </label><br>
+        <input type="text" name="name" class="form-control" id="exampleInputEmail1" placeholder="Имя"><br>
+    </div>
+    <div class="form-group">
+        <label>Ваш Возраст: </label><br>
+        <input type="number" name="age" class="form-control" placeholder="Возраст"><br>
+    </div>
+    <div class="form-group">
+        <label>Ваш пол: </label><br>
+        <input type="text" name="sex" class="form-control" placeholder="Пол"><br>
+    </div>
+    <div class="form-group">
+        <label>Напишите о себе: </label><br>
+        <input type="text" name="discription" class="form-control" placeholder="Описание"><br>
+    </div>
     <input class="btn btn-large" type="submit" name="done"><br>
+
+
+
 </form>
 </body>
 </html>

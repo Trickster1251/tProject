@@ -4,7 +4,6 @@
 <head>
     <meta charset="utf-8">
     <title>Tinder</title>
-    <!-- styles -->
     <link href="/css/bootstrap.css" rel="stylesheet">
     <link href="/css/style.css" rel="stylesheet">
     <link href="/font/css/fontello.css" rel="stylesheet">
@@ -18,10 +17,10 @@
     <div class="navbar-inner">
         <div class="container"> <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a> <a class="brand" href="profile"><img src="/img/user.jpg"/></a>
             <ul class="nav nav-collapse ">
-                <li><a href="/user-show/profile" class="active"><i class="fa fa-user-circle-o"></i> Профиль</a></li>
-                <li><a href="/user-show/index"><i class="icon-trophy"></i> Главная</a></li>
-                <li><a href="/auth/login"><i class="fa fa-sign-in"></i> Вход</a></li>
-
+                <li><a style="font-size:14px" href="/user-show/profile" class="active"><i class="fa fa-user-circle-o"></i> Профиль</a></li>
+                <li><a style="font-size:14px" href="/user-show/index"><i class="icon-trophy"></i> Главная</a></li>
+                <li><a style="font-size:14px" href="/user-register/index"><i class="fa fa-sign-in"></i> Регистрация</a></li>
+                <li><a style="font-size:14px" href="/user-login/index"><i class="fa fa-sign-in"></i> Вход</a></li>
             </ul>
             <div class="nav-collapse collapse">
             </div>
