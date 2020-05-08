@@ -1,12 +1,9 @@
-<?php
-//     echo getcwd(); die();
-?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Flat Design Mini Portfolio</title>
+    <title>Tinder</title>
     <meta name="description" content="Flat Design Mini Portfolio">
     <meta name="keywords" content="responsive, bootstrap, flat design, flat ui, portfolio">
     <meta name="author" content="Dzyngiri">

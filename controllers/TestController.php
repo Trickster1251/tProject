@@ -17,14 +17,15 @@ class TestController extends AppController
         $idd->login($idd->name);
     }
 
-    public function actionIndex()
-    {
-        $id = 1;
-        $model = UserTest::findOne($id);
+    public function actionIndex(){
+//    {
+//        $id = 1;
+//        $model = UserTest::findOne($id);
+//
+//        $model->name;
+//        $this->login($model);
 
-        $model->name;
-        $this->login($model);
-
+        return $this->render('index');
 
     }
 

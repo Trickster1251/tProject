@@ -18,9 +18,6 @@ class UserLikeController extends Controller
         $currentUser = 1;
         $userLikeId = (int)$_POST["user_like_id"];
 
-//        $sql = <<<SQL
-//INSERT INTO users_like(users_id, user_like_id, reason) VALUES ($currentUser, $userLikeId,'')
-//SQL;
 
         Yii::$app->db->createCommand()->insert('users_like', [
             'users_id'=> $currentUser,
